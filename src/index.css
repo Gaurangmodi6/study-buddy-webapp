@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-space: #000000;
+    --blue-primary: #38bdf8;
+    --blue-electric: #2563eb;
+    --text-white: #ffffff;
+  }
+
+  html, body, #root {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Bebas Neue', 'Space Grotesk', sans-serif;
+    letter-spacing: 0.05em;
+  }
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Crisp & Clean Text */
+.text-crisp-white {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.text-crisp-blue {
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+/* Deep Black Translucent Panels with Crisp Electric Blue Borders (Landing Page) */
+.glass-panel {
+  background: rgba(4, 6, 14, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.85);
+}
+
+.glass-panel-interactive {
+  background: rgba(4, 6, 14, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.85);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-interactive:hover {
+  border-color: rgba(56, 189, 248, 0.65);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.95), 0 0 20px rgba(56, 189, 248, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Electric Blue & White Gradient Buttons */
+.blue-gradient-btn {
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 60%, #1d4ed8 100%);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.45);
+}
+
+.blue-gradient-btn:hover {
+  background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #2563eb 100%);
+  box-shadow: 0 6px 26px rgba(56, 189, 248, 0.6);
+  transform: translateY(-1px);
+}
+
+/* ========================================================= */
+/* Authenticated Bright White Theme with Crisp Black Accents */
+/* (White is more than black, bright & daylight workspace)   */
+/* ========================================================= */
+html.theme-light-auth,
+body.theme-light-auth,
+body.theme-light-auth #root,
+.theme-light-auth {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+.theme-light-auth .glass-panel {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  color: #0f172a !important;
+}
+
+.theme-light-auth .glass-panel-interactive {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  color: #0f172a !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-light-auth .glass-panel-interactive:hover {
+  border-color: #000000 !important;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04) !important;
+  transform: translateY(-2px);
+}
+
+.theme-light-auth .blue-gradient-btn {
+  background: #000000 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+}
+
+.theme-light-auth .blue-gradient-btn:hover {
+  background: #1e293b !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.theme-light-auth input,
+.theme-light-auth select,
+.theme-light-auth textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.theme-light-auth input::placeholder,
+.theme-light-auth textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Ensure high-contrast timetable black cards remain pristine pitch black with white text */
+.theme-light-auth .bg-black {
+  background-color: #000000 !important;
+}
+.theme-light-auth .bg-black .text-white {
+  color: #ffffff !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.35);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.7);
+}
+
+.theme-light-auth ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.theme-light-auth ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+.theme-light-auth ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

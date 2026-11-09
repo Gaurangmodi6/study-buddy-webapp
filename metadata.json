@@ -1,0 +1,6 @@
+{
+  "name": "Study Buddy – Mission Control",
+  "description": "Space-themed academic study planner with 3D particle morphing, mission tracking, orbit calendar, and mission control analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
